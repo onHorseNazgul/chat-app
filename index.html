@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chat App</title>
+	<link rel="stylesheet" href="src/styles/style.css">
+</head>
+
+<body>
+
+	<section class="chat-content">
+		<div class="header">
+			<button class="settings-button">Settings</button>
+			<button class="quit-button">Log Out</button>
+		</div>
+
+		<div class="chat-container">
+
+			<template class="message-template">
+				<div class="message">
+
+				</div>
+			</template>
+
+		</div>
+
+	</section>
+
+	<div class="container">
+
+		<section class="autorization-content">
+			<div class="header">
+				<h3>Autorization</h3>
+				<button id="cancel-autorization">
+					×
+				</button>
+			</div>
+
+			<form action="#" id="autorization-form">
+				<label for="autorization-input">Mail:</label>
+				<input type="email" id="autorization-input" placeholder='Your email' required>
+				<div class="autorization-buttons">
+					<button id='get-code'>Get code</button>
+					<button id='send-code'>Send code</button>
+				</div>
+			</form>
+		</section>
+
+		<section class="confirm-content">
+			<div class="header">
+				<h3>Сonfirmation</h3>
+				<button id="cancel-confirmation">
+					×
+				</button>
+			</div>
+
+			<form action="#" id="confirmation-form">
+				<label for="confirmation-input">Code:</label>
+				<input type="text" id="confirmation-input" required>
+				<div class="confirmation-buttons">
+					<button id='login-button'>Login</button>
+				</div>
+			</form>
+		</section>
+
+		<section class="settings-content">
+			<div class="header">
+				<h3>Settings</h3>
+				<button id="close-settings">
+					×
+				</button>
+			</div>
+
+			<form action="#" id="settings-form">
+				<label for="nickname-input">Nickname:</label>
+				<input type="text" id="nickname-input" placeholder='Your nickname' required>
+				<button>-></button>
+			</form>
+		</section>
+
+	</div>
+
+</body>
+
+</html>
