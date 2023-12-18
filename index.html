@@ -6,11 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Chat App</title>
 	<link rel="stylesheet" href="src/styles/style.css">
+	<script src='main.js' defer type='module'></script>
 </head>
 
 <body>
 
 	<section class="chat-content">
+
 		<div class="header">
 			<button class="settings-button">Settings</button>
 			<button class="quit-button">Log Out</button>
@@ -19,12 +21,23 @@
 		<div class="chat-container">
 
 			<template class="message-template">
-				<div class="message">
 
+				<div class="message">
+					<span class="message-title">
+					</span>
+
+					<span class="message-time">
+					</span>
 				</div>
+
 			</template>
 
 		</div>
+
+		<form class="chat-form">
+			<input type="text" id="message-input" placeholder='message..'>
+			<button class="chat-button">-></button>
+		</form>
 
 	</section>
 
@@ -40,7 +53,7 @@
 
 			<form action="#" id="autorization-form">
 				<label for="autorization-input">Mail:</label>
-				<input type="email" id="autorization-input" placeholder='Your email' required>
+				<input type="email" class='autorization-input' id="autorization-input" placeholder='Your email' required>
 				<div class="autorization-buttons">
 					<button id='get-code'>Get code</button>
 					<button id='send-code'>Send code</button>

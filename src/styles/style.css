@@ -17,15 +17,15 @@ body {
 	margin: 0 auto;
 	background-color: #535353;
 	margin-top: 100px;
-	padding: 110px 50px;
-	display: none;
+	padding: 110px 40px;
+	/* display: none; */
 }
 
-section {
+.container section {
 	background-color: #fff;
 	height: 380px;
 	margin: 0 auto;
-	padding: 10px 8px;
+	padding: 10px 16px;
 }
 
 .header {
@@ -40,7 +40,7 @@ section {
 	margin: 0 auto;
 	background-color: #fff;
 	margin-top: 120px;
-	padding: 16px 16px;
+	padding: 10px 16px;
 }
 
 .container .header button {
@@ -49,11 +49,81 @@ section {
 }
 
 .chat-content .header button {
-	font-size: 18px;
+	font-size: 16px;
 	color: #000;
 	border: 1px solid #000;
 	text-align: center;
-	padding: 5px 10px;
+	padding: 4px 8px;
+	width: 25%;
+}
+
+.chat-container {
+	border: 1px solid #000;
+	height: 84.5%;
+	padding: 8px;
+	margin: 8px 0;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.chat-container .message {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+	background-color: #e5e5e5;
+	padding: 8px;
+	border-radius: 4px;
+	margin: 8px 0 0 0;
+	min-width: 20%;
+	max-width: 100%;
+	word-wrap: break-word;
+}
+
+.chat-container .message span {
+	display: block;
+}
+
+.chat-container .message-time {
+	font-size: 14px;
+	font-style: italic;
+	font-weight: 300;
+	text-align: right;
+}
+
+.chat-container .message-content {
+	border: 1px solid #000;
+	height: 437px;
+	margin: 8px 0;
+	padding: 8px 10px;
+	display: flex;
+	flex-direction: column-reverse;
+	overflow-y: scroll;
+}
+
+.chat-container .message-content::-webkit-scrollbar {
+	display: none;
+}
+
+.chat-container .message-container {
+	display: flex;
+	flex-direction: column;
+	margin: 8px 0;
+}
+
+.chat-form input,
+.chat-form button {
+	border: 1px solid #000;
+}
+
+.chat-form input {
+	width: 89.3%;
+	padding: 6px 8px;
+	font-size: 16px;
+	margin: 0 4px 0 0;
+}
+
+.chat-form button {
+	padding: 6px 11px;
 }
 
 label {
@@ -61,7 +131,7 @@ label {
 	margin: 0;
 }
 
-input {
+.container input {
 	width: 100%;
 	border: 1px solid #000;
 	padding: 8px;
@@ -98,8 +168,8 @@ form button:active,
 	background-color: rgb(11, 166, 255);
 }
 
-.autorization-content,
 .confirm-content,
-.settings-content {
+.settings-content,
+.chat-content {
 	display: none;
 }
