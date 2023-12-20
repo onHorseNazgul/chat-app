@@ -7,7 +7,7 @@ export const autorizationForm = document.querySelector('#autorization-form')
 export const emailInput = document.querySelector('#autorization-input')
 export const sendCodeBtn = document.querySelector('#send-code')
 
-const apiUrl = 'https://edu.strada.one/api/user'
+export const apiUrl = 'https://edu.strada.one/api/user'
 const headers = {
 	'Content-Type': 'application/json;charset=utf-8',
 }
