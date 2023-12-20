@@ -31,11 +31,15 @@ const pageHeaders = {
 	'Authorization': `Bearer ${getCookie('token')}`,
 }
 
-function setCookie(token) {
+let token = {}
+
+function setCookie(tokenValue) {
 	const date = new Date()
-	const expires = date.setDate(date.getHours() + 1)
-	const cookie =
-		(document.cookie = `token=${token}; expires=${date.toUTCString()}`)
+	date.setTime(date.getTime() + 60 * 60 * 1000) // Устанавливаем срок действия куки в 1 час
+	const expires = '; expires=' + date.toUTCString()
+	const cookie = (document.cookie = `token=${JSON.stringify(
+		tokenValue
+	)}${expires}; path=/`)
 }
 
 function getCookie(cname) {
